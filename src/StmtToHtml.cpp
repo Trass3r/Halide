@@ -275,7 +275,7 @@ private:
     void visit(const Broadcast *op) {
         stream << open_span("Broadcast");
         stream << open_span("Matched");
-        stream << symbol("x") << op->lanes << "(";
+        stream << symbol("broadcastx") << op->lanes << "(";
         stream << close_span();
         print(op->value);
         stream << matched(")");
